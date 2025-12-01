@@ -1,31 +1,31 @@
 ---
 layout: post
-title:  first post! testing...
-date:   2025-11-29
+title: first post! testing...
+date: 2025-11-29
 ---
 
 My first official blog post. Just wanted to test the rendering in various scenarios, in my editor and in github.
 
----
+______________________________________________________________________
 
 ## heading2
 
-a paragraph. *italic* **bold** ~~strikethrough~~
+a paragraph. *italic* **bold** ~~strike-through~~
 
 > quote
->> nested quote
+>
+> > nested quote
 
 ### heading3
 
-a [link](https://google.com) to google
+a [link to google](https://google.com)
 
 - unordered
 - list
 
 1. ordered
 2. list
-   1. sublist
-
+   1. sub-list
 
 - [ ] not done
 - [x] done
@@ -54,23 +54,21 @@ relative picture:
 
 ![pic](./picture.png)
 
-
 table:
 
-table col 1 | col 2
---- | ---
-a1 | b1
-a2 | b2
-
+| table col 1 | col 2 |
+| ----------- | ----- |
+| a1          | b1    |
+| a2          | b2    |
 
 <details markdown="1"><summary>collapsible details section</summary>
 
 the stuff inside
 
 ```python
-# mardown inside
+# markdown inside
 ```
 
 </details>
 
-rekick ci.
+re-kick ci.

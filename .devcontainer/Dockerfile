@@ -12,6 +12,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install Jekyll and Bundler
 RUN gem install bundler jekyll
 
-RUN pip install --no-cache-dir --break-system-packages uv
-
-RUN uv tool install --no-cache pre-commit
+RUN pip install --no-cache-dir --break-system-packages pre-commit

@@ -1,0 +1,10 @@
+version: "0.2"
+enabledFileTypes:
+  "*": false
+  markdown: true
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - prek
+ignoreWords: []
+import: []
