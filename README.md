@@ -13,8 +13,8 @@
     - [x] markdown
     - [x] spelling
     - [ ] link checks
-  - [ ] linting CI
-  - [ ] ditch pre-commit for [prek](https://github.com/j178/prek)
+  - [x] linting CI
+  - [x] ditch pre-commit for [prek](https://github.com/j178/prek)
 - functional blog features:
   - [ ] tag links / pages
   - [ ] next/prev links
