@@ -1,7 +1,7 @@
 ---
-layout: post
 title: first post! testing...
-date: 2025-11-29
+tags: [testing, blog]
+series: setting up the blog
 ---
 
 My first official blog post. Just wanted to test the rendering in various scenarios, in my editor and in github.

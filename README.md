@@ -22,3 +22,6 @@
 - cool theme:
   - [ ] colors
   - [ ] title bar
+  - [ ] gh link
+  - [ ] build info
+  - [ ] home page link
