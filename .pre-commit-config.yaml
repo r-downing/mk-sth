@@ -31,8 +31,14 @@ repos:
     hooks:
       - id: cspell
         files: '\.md$'
-  - repo: https://github.com/r-downing/exiftool
-    rev: testtag
+  - repo: https://github.com/exiftool/exiftool
+    rev: c1f1343
     hooks:
       - id: exiftool
-        args: [-overwrite_original_in_place, -exif:all=, -iptc:all=, -xmp:all=]
+        args:
+          [
+            -overwrite_original_in_place,
+            "-exif:all=",
+            "-iptc:all=",
+            "-xmp:all=",
+          ]
