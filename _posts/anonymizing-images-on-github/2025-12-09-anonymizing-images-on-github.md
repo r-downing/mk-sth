@@ -43,3 +43,5 @@ For a tool to be used by prek, it needs to have a .pre-commit-hooks.yaml config 
 ```
 
 <!-- cspell:enable -->
+
+<span style="color: red">Disclaimer: if you commit and push sensitive files or data to github, even if you go back and delete it, force-push, etc, it might still be discoverable somehow.</span> That's why it's so important to prevent these kinds of things in the first place.
