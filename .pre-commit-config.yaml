@@ -35,6 +35,8 @@ repos:
     rev: c1f1343
     hooks:
       - id: exiftool
+        exclude_types:
+          - svg
         args:
           [
             -overwrite_original_in_place,
