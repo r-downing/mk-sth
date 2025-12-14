@@ -1,7 +1,7 @@
 ---
 title: first post! testing...
 tags: [testing, blog]
-series: setting up the blog
+series: makin the blog
 ---
 
 My first official blog post. Just wanted to test the rendering in various scenarios, in my editor and in github.
@@ -77,3 +77,9 @@ embedded video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J---aiyznGQ?si=Xjnp4qN6hE_I6K4j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <!-- cspell: enable -->
+
+<div id="example">Inline script is <b>NOT working</b></div>
+
+<script>
+    document.getElementById("example").innerHTML = "Inline script is working!"
+</script>

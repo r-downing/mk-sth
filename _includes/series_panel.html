@@ -1,0 +1,29 @@
+{%- if page.series -%}
+    {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+    {%- if series_posts.size > 1 -%}
+        {% assign target = "search_value" %}
+        {% assign found_index = -1 %}
+
+        {% for item in series_posts %}
+            {% if item == page %}
+                {% assign found_index = forloop.index %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        <details class="series-panel">
+            <summary>{{ found_index }}/{{ series_posts.size }} in the series: <b>{{ page.series }}</b></summary>
+            <ol>
+                {%- for post in series_posts -%}
+                <li>
+                    {% if post == page %}
+                        {{ post.title }} - {{ post.date | date: date_format }}
+                    {% else %}
+                        <a href="{{ post.url | relative_url }}">{{ post.title }} - {{ post.date | date: date_format }}</a>
+                    {% endif %}
+                </li>
+                {%- endfor -%}
+            </ol>
+            </details>
+
+    {%- endif -%}
+{%- endif - %}
