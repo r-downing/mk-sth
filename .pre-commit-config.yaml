@@ -32,7 +32,7 @@ repos:
       - id: cspell
         files: '\.md$'
   - repo: https://github.com/exiftool/exiftool
-    rev: c1f1343
+    rev: 8e85c25
     hooks:
       - id: exiftool
         exclude_types:
