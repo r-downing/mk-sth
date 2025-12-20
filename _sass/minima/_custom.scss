@@ -1,0 +1,6 @@
+iframe[src*="youtube.com"] {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
