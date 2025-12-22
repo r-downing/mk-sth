@@ -21,6 +21,27 @@ layout: default
     {{ content }}
   </div>
 
+  <hr />
+
+  <div class="next-prev-nav">
+    <div>
+      {%- if page.previous -%}
+      <a href="{{page.previous.url | relative_url}}">
+        &#x2B9C; {{ page.previous.title }}
+      </a>
+      {%- endif - %}
+    </div>
+
+    <div>
+      {%- if page.next -%}
+      <a href="{{page.next.url | relative_url}}">
+        {{ page.next.title }} &#x2B9E;
+      </a>
+      {%- endif - %}
+    </div>
+  </div>
+
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}

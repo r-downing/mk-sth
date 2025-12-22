@@ -17,8 +17,8 @@
   - [x] ditch pre-commit for [prek](https://github.com/j178/prek)
 - functional blog features:
   - [ ] tag links / pages
-  - [ ] next/prev links
-  - [ ] series
+  - [x] next/prev links
+  - [x] series
 - cool theme:
   - [ ] colors
   - [ ] title bar
