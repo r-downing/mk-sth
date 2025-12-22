@@ -27,7 +27,7 @@ layout: default
     <div>
       {%- if page.previous -%}
       <a href="{{page.previous.url | relative_url}}">
-        &#x2B9C; {{ page.previous.title }}
+        &lArr; {{ page.previous.title }}
       </a>
       {%- endif - %}
     </div>
@@ -35,7 +35,7 @@ layout: default
     <div>
       {%- if page.next -%}
       <a href="{{page.next.url | relative_url}}">
-        {{ page.next.title }} &#x2B9E;
+        {{ page.next.title }} &rArr;
       </a>
       {%- endif - %}
     </div>
