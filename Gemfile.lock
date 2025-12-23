@@ -73,6 +73,8 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-archives (2.3.0)
+      jekyll (>= 3.6, < 5.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-postfiles (3.1.0)
@@ -162,6 +164,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.4)
+  jekyll-archives
   jekyll-feed (~> 0.9)
   jekyll-postfiles
   jekyll-seo-tag (~> 2.1)
