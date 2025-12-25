@@ -1,0 +1,13 @@
+---
+layout: page
+title: Archive
+---
+
+{% assign posts_by_month_year = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
+
+{% for month_year_group in posts_by_month_year %}
+  <h2>{{ month_year_group.name }}</h2>
+
+ {%- include post_list.html posts=month_year_group.items-%}
+
+{% endfor %}
