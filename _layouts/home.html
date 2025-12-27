@@ -9,10 +9,16 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    {%- include post_list.html posts=site.posts-%}
+  {% assign latest_post_count = 6 %}
 
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
+    {% assign first_posts = site.posts | slice: 0, latest_post_count %}
+    {%- include post_list.html posts=first_posts -%}
+
+    {%- if site.posts.size > latest_post_count -%}
+    <p><a href="{{ "/archive.html" | relative_url }}">Plus {{site.posts.size | minus: latest_post_count}} more in the archive &rArr;</a></p>
+    {%- endif -%}
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
