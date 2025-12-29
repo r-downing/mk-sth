@@ -3,7 +3,7 @@ module Jekyll
     priority :highest
     def generate(site)
       commit_hash = ENV['JEKYLL_BUILD_REVISION'] || `git rev-parse --short HEAD`.strip
-      if `git status --short`.strip
+      if !`git status --short`.strip.empty?
         commit_hash += "-dirty"
       end
       site.config['commit_hash'] = commit_hash
