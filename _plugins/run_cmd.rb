@@ -6,7 +6,7 @@ module Jekyll
     end
 
     def render(context)
-      `#{@command}`.strip
+      `#{@command}`.rstrip
     rescue => e
       "Error executing command: #{e.message}"
     end

@@ -69,3 +69,11 @@ And just for the hell of it, here's the output of the `grep --version` command f
 ```txt
 {% run_cmd grep --version %}
 ```
+
+### some security considerations
+
+I did a quick test to make sure that a `run_cmd ...` invocation that outputs another `run_cmd ...` won't be recursively evaluated. If it did, and my command involved fetching some external file, a [bad actor](https://en.wikipedia.org/wiki/Rob_Schneider) could modify that external file to cause my builder to run some arbitrary commands. But thankfully that's not the case.
+
+### some performance considerations
+
+If I include a file using another liquid directive which includes a run_cmd, then that **would** get evaluated, which is nice. But this means if I were to use a run_cmd in a common file that's included in multiple places, such as `_includes/footer.html`, then the command would be invoked multiple times, once for each file that includes the footer. So this kind of filter which runs in the pre-rendered stage should be used mainly in the lowest-level output files.
