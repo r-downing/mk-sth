@@ -25,23 +25,12 @@ You can manually run all the checks like this. Or it runs the appropriate checks
 
 For a tool to be used by prek, it needs to have a .pre-commit-hooks.yaml config file in the project. So I created a fork of exiftool with this config and got it [merged](https://github.com/exiftool/exiftool/pull/366) back to the main repo. Now I, and anyone else, can now add a few lines of yaml to their git projects to automatically strip away exif data whenever they commit images to a git repo.
 
-<!-- cspell:disable -->
+<!-- grab the lines in .pre-commit-config.yaml from exiftool to the next repo -->
 
 ```yaml
-  - repo: https://github.com/exiftool/exiftool
-    rev: c1f1343  # Todo - switch to a release tag when next version comes out
-    hooks:
-      - id: exiftool
-        # removes everything except orientation
-        args:
-          [
-            -overwrite_original_in_place,
-            "-exif:all=",
-            "-iptc:all=",
-            "-xmp:all=",
-          ]
+# .pre-commit-config.yaml
+repos:
+{% run_cmd sed -n '/exiftool$/,/repo:/{ /repo:/{ /exiftool$/!d }; p }' .pre-commit-config.yaml %}
 ```
-
-<!-- cspell:enable -->
 
 <span style="color: red">Disclaimer: if you commit and push sensitive files or data to github, even if you go back and delete it, force-push, etc, it might still be discoverable somehow.</span> That's why it's so important to prevent these kinds of things in the first place.
