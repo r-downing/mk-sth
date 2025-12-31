@@ -1,7 +1,7 @@
 ---
 title: running bash commands in jekyll (plus git commit info)
 series: makin the blog
-tags: [git, bash, linux, jekyll, commit, ruby, blog]
+tags: [git, bash, linux, jekyll, liquid, commit, ruby, blog]
 ---
 
 I started vibe-coding a little jekyll extension in Ruby to embed the git commit sha and timestamp into the blog, then accidentally came up with something even cooler.
