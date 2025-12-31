@@ -22,36 +22,34 @@ layout: default
   </div>
 
   <style>
-    .tag-nav {
-      font-size: smaller;
-      padding: 1em 0;
-    }
 
-    .tag-nav>div {
+    .tag-div {
       border-radius: 1em;
       /* background-color: gray; */
-      border: 1px dotted;
+      border: 1px solid;
       display: inline-block;
-      padding: .125em;
+      padding: .125em .25em;
       margin: .125em;
       /* text-transform: uppercase; */
-      font-style: italic;
+      /* font-style: italic; */
       /* font-size: smaller; */
-    }
-    .tag-nav>div:hover {
-      border: 1px solid;
     }
 
   </style>
 
-  {%- if page.tags -%}
-  <div class="tag-nav">
-    Tags:
-    {%- for tag in page.tags -%}
-    <div>{{tag}}</div>
-    {%- endfor -%}
+  <div style="font-size: smaller; margin: 1em 0;">
+    {%- if page.tags -%}
+    {% assign sorted_tags = page.tags | sort %}
+    <div class="tag-nav">
+      Tags:
+      {%- for tag in sorted_tags -%}
+      <a href="{{ '/tag/'' | append: tag | relative_url }}"><div class="tag-div">
+        {{tag}}
+      </div></a>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
   </div>
-  {%- endif -%}
 
   <hr />
 
