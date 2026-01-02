@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Archive
+nav_order: 2
 ---
 
 {% assign posts_by_month_year = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
