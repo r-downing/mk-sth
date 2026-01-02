@@ -33,3 +33,12 @@ iframe[src*="youtube.com"] {
 .tag-div div:not(:first-child) {
     border-left: 1px solid;
 }
+
+summary {
+  cursor: pointer;
+  color: $brand-color;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
