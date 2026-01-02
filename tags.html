@@ -4,13 +4,13 @@ title: Tags
 permalink: /tag/
 ---
 
-{% assign sorted_tags = site.tags | sort %}
-
-{% for tag in sorted_tags %}
-{% assign tag_name = tag | first %}
-{% assign tag_post_list = site.tags[tag_name] %}
-<ul>
-    <li><a href="./{{tag_name | slugize }}">{{tag_name}} ({{tag_post_list | size}})</a></li>
-</ul>
-
+{% assign tag_names = "" | split: "" %}
+{% for tag in site.tags %}
+  {% assign tag_names = tag_names | push: tag[0] %}
 {% endfor %}
+
+{% assign sorted_tags = tag_names | sort %}
+
+<div style="font-size: larger">
+    {%- include tag_list.html tags=sorted_tags -%}
+</div>

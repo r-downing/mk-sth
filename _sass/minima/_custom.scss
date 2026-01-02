@@ -19,3 +19,17 @@ iframe[src*="youtube.com"] {
   text-align: right;
   float: right;
 }
+
+.tag-div {
+    border-radius: 1rem;
+    border: 1px solid;
+    display: inline-block;
+    margin: .125rem;
+}
+.tag-div div {
+    padding: .125rem .25rem;
+    display: inline-block;
+}
+.tag-div div:not(:first-child) {
+    border-left: 1px solid;
+}

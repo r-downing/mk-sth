@@ -1,0 +1,8 @@
+<div class="tag-nav">
+    {%- for tag in include.tags -%}
+    <a href="{{ '/tag/'' | append: tag | relative_url }}"><div class="tag-div">
+        <div>{{tag}}</div>
+        <div>{{site.tags[tag].size}}</div>
+    </div></a>
+    {%- endfor -%}
+</div>

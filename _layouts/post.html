@@ -21,35 +21,11 @@ layout: default
     {{ content }}
   </div>
 
-  <style>
-
-    .tag-div {
-      border-radius: 1em;
-      /* background-color: gray; */
-      border: 1px solid;
-      display: inline-block;
-      padding: .125em .25em;
-      margin: .125em;
-      /* text-transform: uppercase; */
-      /* font-style: italic; */
-      /* font-size: smaller; */
-    }
-
-  </style>
-
+  {%- if page.tags -%}
   <div style="font-size: smaller; margin: 1em 0;">
-    {%- if page.tags -%}
-    {% assign sorted_tags = page.tags | sort %}
-    <div class="tag-nav">
-      Tags:
-      {%- for tag in sorted_tags -%}
-      <a href="{{ '/tag/'' | append: tag | relative_url }}"><div class="tag-div">
-        {{tag}}
-      </div></a>
-      {%- endfor -%}
-    </div>
-    {%- endif -%}
+    {%- include tag_list.html tags=page.tags -%}
   </div>
+  {%- endif -%}
 
   <hr />
 
