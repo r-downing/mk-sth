@@ -1,4 +1,4 @@
-name: Prek checks
+name: lint and format checks
 on: [push, pull_request]
 
 jobs:
