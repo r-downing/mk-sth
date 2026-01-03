@@ -8,9 +8,7 @@
         {{ post.title | escape }}
         </a>
     </h3>
-    {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-    {%- endif -%}
+    <div style="font-size: smaller;">{{ post.excerpt | strip_html }}</div>
     </li>
     {%- endfor -%}
 </ul>
