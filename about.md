@@ -14,3 +14,5 @@ This is my blog, mainly about making things. Software. Hardware. Sometimes even 
 I'm an embedded software engineer / mechanical engineer with experience in aerospace, robotics, and IoT. [My home page](https://ryand.io).
 
 <small><a href="https://github.com/r-downing/mk-sth/commit/{{ site.commit_hash }}">build: {{ site.commit_hash }} {{ site.commit_timestamp }}</a></small>
+
+{% run_cmd git status --short %}
