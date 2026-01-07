@@ -1,6 +1,6 @@
 ---
 title: curtains and curtain accessories
-tags: [cad, 3d-printing, home improvement, mechanical-engineering]
+tags: [cad, 3d-printing, home-improvement, mechanical-engineering]
 ---
 
 We've been installing a lot of curtains and I've gotten it down to a science. And of course I had to get 3d-printing involved somehow.

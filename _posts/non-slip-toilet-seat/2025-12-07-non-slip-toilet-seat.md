@@ -1,6 +1,6 @@
 ---
 title: non-slip toilet seat
-tags: [cad, 3d-printing, home improvement, mechanical-engineering]
+tags: [cad, 3d-printing, home-improvement, mechanical-engineering]
 ---
 
 I hate it when the toilet seat slides around, and I hate how it's connected. It's a soft plastic screw and nut, joining a plastic seat to a hard ceramic bowl.
