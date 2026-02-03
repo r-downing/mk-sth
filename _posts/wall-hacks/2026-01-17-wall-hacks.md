@@ -15,6 +15,8 @@ The frustrating thing about drywall is that it's just about as strong as a graha
 
 ![](./img/hole.jpg)
 
+## the solution
+
 I wanted to put a little something between the outlet box wings and the inside of the drywall to distribute the force of the clamps and make it stay in place better. Thankfully I had some 1/8" wood leftover from some laser-cutting projects, so I just hacked off a couple long thin strips.
 
 ![](./img/wood.jpg)
